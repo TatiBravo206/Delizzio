@@ -1,38 +1,255 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delizzio - Recetario de Cocina</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Recetario de Cocina</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="img/icono.ico">
 </head>
+
 <body>
-    <header>
-        <!-- Menu -->
-            <h1>Delizzio</h1>
-        <nav class="navigation">
-            <ul>
-                <li><a href="#">Recetas</a></li>
-                <li><a href="#">Inicio Sesion</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="#">Delizzio<span>.</span></a>
+
+            <input id="menu-toggle" type="checkbox" class="menu-toggle" />
+            <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
+                <span></span>
+            </label>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#categorias">Categorías</a></li>
+                    <li><a href="#recipes">Recetas</a></li>
+                    <li><a href="#chef">El Chef</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <!-- zona principal (de que se trata la pagina)-->
-    <section class="hero">
-        <div class="content">
-            <h2>Delizzio!</h2>
-            <p> Un recetario de cocina donde puedes descubrir recetas deliciosas y fáciles de preparar para cada ocasión.<br>
-✨ En <em>DELIZZIO</em> creemos que cocinar no tiene que ser complicado, 
-por eso te compartimos recetas rápidas y llenas de sabor para que sorprendas a tu familia y amigos.<br>
-😋 Porque cocinar es un arte... ¡pero también es pura diversión!<br>
-👉 Explora nuestro recetario y encuentra tu próxima receta favorita.</p>
-            <button class="boton-recetas"> 👉 <strong>Explorar Recetas</strong></button> <!--boton que nos lleva a la seccion de recetas-->
-        </div>
-        <div class="image">
-            <img src="img/foto principal.jpg" alt="Platillos Delizzio"> <!--imagen principal-->
-        </div>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h1>Delizzio!<br /><span>Recetas fáciles y deliciosas para cualquier ocasión</span></h1>
+                    <p> Un recetario de cocina donde puedes descubrir recetas deliciosas y fáciles de preparar para cada
+                        ocasión.<br>
+                        ✨ En <em>DELIZZIO</em> creemos que cocinar no tiene que ser complicado,
+                        por eso te compartimos recetas rápidas y llenas de sabor para que sorprendas a tu familia y
+                        amigos.<br>
+                        😋 Porque cocinar es un arte... ¡pero también es pura diversión!<br>
+                        👉 Explora nuestro recetario y encuentra tu próxima receta favorita.</p>
+                    <a class="btn" href="#recipes">Ver recetas</a>
+                </div>
+                <div class="hero-art">
+                    <div class="card hero-card">
+                        <img src="img/foto principal.jpg" alt="Banner de presentación del sitio de recetas">
+                    </div>
+                </div>
 
         </section>
+
+        <section id="categories" class="section categories">
+            <div class="container">
+                <h2 class="section-title">Categorías</h2>
+                <div class="cats">
+                    <a href="#recipes" class="chip" data-cat="all">Todas</a>
+                    <a href="#recipes" class="chip" data-cat="desayuno">Desayuno</a>
+                    <a href="#recipes" class="chip" data-cat="postre">Postres</a>
+                    <a href="#recipes" class="chip" data-cat="vegano">Vegano</a>
+                    <a href="#recipes" class="chip" data-cat="rapido">Rápido</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="recipes" class="section recipes">
+            <div class="container">
+                <h2 class="section-title">Recetas</h2>
+                <div class="recipes-grid" id="recipes-grid">
+                    <!-- Cartas -->
+                    <article class="recipe-card" data-cat="desayuno">
+                        <div class="thumb">
+                            <img src="img/tostadas.jpg" alt="Tostadas con aguacate">
+                        </div>
+                        <div class="card-body">
+                            <h3>Tostadas con aguacate</h3>
+                            <p class="meta">10 min · Desayuno saludable</p>
+                            <div class="card-actions">
+                                <button class="fav-btn" data-id="r1" aria-pressed="false">♡ Favorito</button>
+                                <a href="#" class="btn small">Ver receta</a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="recipe-card" data-cat="postre">
+                        <div class="thumb">
+                            <img src="img/brownie.jpg" alt="Brownie de chocolate artesanal">
+                        </div>
+                        <div class="card-body">
+                            <h3>Brownie de chocolate artesanal</h3>
+                            <p class="meta">40 min · Postre gourmet</p>
+                            <div class="card-actions">
+                                <button class="fav-btn" data-id="r2" aria-pressed="false">♡ Favorito</button>
+                                <a href="#" class="btn small">Ver receta</a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="recipe-card" data-cat="vegano">
+                        <div class="thumb">
+                            <img src="img/bowl.jpg" alt="Bowl vegano de quinoa con vegetales frescos">
+                        </div>
+                        <div class="card-body">
+                            <h3>Bowl de quinoa con vegetales frescos</h3>
+                            <p class="meta">25 min · Receta vegana</p>
+                            <div class="card-actions">
+                                <button class="fav-btn" data-id="r3" aria-pressed="false">♡ Favorito</button>
+                                <a href="#" class="btn small">Ver receta</a>
+                            </div>
+                        </div>
+                    </article>
+
+
+                    <article class="recipe-card" data-cat="rapido">
+                        <div class="thumb">
+                            <img src="img/wrap.jpg" alt="Wrap de pollo con vegetales y salsa ligera">
+                        </div>
+                        <div class="card-body">
+                            <h3>Wrap de pollo con vegetales frescos</h3>
+                            <p class="meta">15 min · Receta rápida</p>
+                            <div class="card-actions">
+                                <button class="fav-btn" data-id="r4" aria-pressed="false">♡ Favorito</button>
+                                <a href="#" class="btn small">Ver receta</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="chef" class="section chef">
+            <div class="container chef-grid">
+
+                <!-- Imagen del Chef -->
+                <div class="chef-photo card">
+                    <img src="img/chef.jpeg" alt="Chef principal del sitio">
+                </div>
+
+                <!-- Biografía del Chef -->
+                <div class="chef-bio">
+                    <h3>Chef Mariana</h3>
+                    <p>
+                        Apasionada por la cocina sencilla y saludable. Comparte recetas con pasos claros, ingredientes
+                        accesibles y consejos prácticos para todos los niveles.
+                    </p>
+                    <a href="#contact" class="btn">Contactar</a>
+                </div>
+
+            </div>
+        </section>
+
+        <footer id="contact" class="site-footer">
+            <div class="container footer-grid">
+
+                <!-- Información principal -->
+                <div class="footer-about">
+                    <h4>Delizzio</h4>
+                    <p>Recetas pensadas para la vida real, con sabor y practicidad.</p>
+                </div>
+
+                <!-- Navegación -->
+                <div class="footer-nav">
+                    <h4>Navegación</h4>
+                    <nav>
+                        <a href="#recipes">Recetas</a>
+                        <a href="#categories">Categorías</a>
+                        <a href="#contact">Contacto</a>
+                    </nav>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <ul>
+                        <li><a href="#" aria-label="Instagram">@Delizzio</a></li>
+                        <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                        <li><a href="#" aria-label="TikTok">TikTok</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Derechos reservados -->
+            <div class="copyright">
+                © <span id="year"></span> Delizzio. Todos los derechos reservados.
+            </div>
+        </footer>
+        <script>
+            (() => {
+                // --- Año dinámico ---
+                const yearSpan = document.getElementById('year');
+                if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+                // --- Favoritos con LocalStorage ---
+                const LS_KEY = 'cooky_favs_v1';
+                const favBtns = document.querySelectorAll('.fav-btn');
+                const getFavs = () => JSON.parse(localStorage.getItem(LS_KEY) || '[]');
+                const setFavs = (favs) => localStorage.setItem(LS_KEY, JSON.stringify(favs));
+                let favs = getFavs();
+
+                const updateFavButtons = () => {
+                    favBtns.forEach(btn => {
+                        const isFav = favs.includes(btn.dataset.id);
+                        btn.textContent = isFav ? '♥ Favorito' : '♡ Favorito';
+                        btn.setAttribute('aria-pressed', isFav);
+                        btn.classList.toggle('is-fav', isFav);
+                    });
+                };
+
+                favBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const id = btn.dataset.id;
+                        if (!id) return;
+                        favs = favs.includes(id) ? favs.filter(f => f !== id) : [...favs, id];
+                        setFavs(favs);
+                        updateFavButtons();
+                    });
+                });
+                updateFavButtons();
+
+                // --- Filtros de categorías ---
+                const chips = document.querySelectorAll('.chip');
+                const cards = document.querySelectorAll('.recipe-card');
+
+                chips.forEach(chip => {
+                    chip.addEventListener('click', () => {
+                        const cat = chip.dataset.cat;
+                        chips.forEach(c => c.classList.remove('active'));
+                        chip.classList.add('active');
+
+                        cards.forEach(card => {
+                            const show = cat === 'all' || card.dataset.cat === cat;
+                            card.style.display = show ? '' : 'none';
+                        });
+                    });
+                });
+
+                // --- Cerrar menú en móvil ---
+                const menuToggle = document.getElementById('menu-toggle');
+                document.querySelectorAll('.nav a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (menuToggle?.checked) menuToggle.checked = false;
+                    });
+                });
+            })();
+        </script>
+
 </body>
+
 </html>
