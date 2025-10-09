@@ -169,7 +169,51 @@ body {
     color: #222;
 }
 
-/* === Categorías === */
+/* Buscador */
+.buscador {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem auto;
+    max-width: 400px;
+    background: #fff;
+    padding: 0.4rem 0.6rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.buscador input {
+    flex: 1;
+    padding: 0.6rem 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+}
+
+.buscador .btn-buscador {
+    background: #c49b63;
+    border: none;
+    padding: 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s;
+}
+
+.buscador .btn-buscador:hover {
+    background: #a3773f;
+}
+
+.symbols-outlined {
+    font-size: 24px;
+    color: rgb(53, 6, 6);
+}
+
+/* Categorías */
 .cats {
     display: flex;
     justify-content: center;
@@ -178,6 +222,9 @@ body {
 }
 
 .chip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
     border: 1px solid #c49b63;
     color: #c49b63;
@@ -187,6 +234,12 @@ body {
     cursor: pointer;
     font-weight: 500;
     transition: all 0.3s;
+}
+
+.chip img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
 }
 
 .chip:hover,
@@ -208,6 +261,8 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .recipe-card:hover {
@@ -241,7 +296,7 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-
+/* Botón ver receta */
 .btn.small {
     background: #c49b63;
     color: #fff;
@@ -250,7 +305,7 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
 }
-
+/* Botón de favorito */
 .fav-btn {
     border: none;
     background: none;
@@ -264,18 +319,30 @@ body {
     transform: scale(1.2);
 }
 
-/* === Chef === */
+/* Chef */
+.section-chef {
+    background: linear-gradient(to right, #fffaf7, #fff1e6);
+    ;
+    width: 100%;
+    padding: 4rem 0;
+}
+
 .chef-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 3rem;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .chef-photo img {
-    width: 100%;
+    width: 50%;
+    height: auto;
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
 }
 
 .chef-bio h3 {
@@ -297,7 +364,7 @@ body {
     font-weight: 500;
 }
 
-/* === Footer === */
+/* Footer  */
 .site-footer {
     background: #111;
     color: #f0f0f0;
@@ -351,7 +418,7 @@ body {
     color: #aaa;
 }
 
-/* === Responsive menú === */
+/* Responsive menú */
 @media (max-width: 768px) {
     .menu-btn {
         display: block;

@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    color: #222;
+    background: linear-gradient(to right, #FFF3E6, #FFDCB8);
+    line-height: 1.6;
+    height: 100vh;
+}
+
+/*formulario*/
+.formulario {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.formulario h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #c7894b;
+}
+
+.formulario form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/*usuario y contraseña*/
+.formulario .usuario,
+.formulario .contraseña {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.usuario input,
+.contraseña input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.usuario span::before,
+.contraseña span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #c49b63;
+    transition: .5s;
+}
+
+.usuario label,
+.contraseña label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.usuario input:focus~label,
+.usuario input:valid~label,
+.contraseña input:focus~label,
+.contraseña input:valid~label {
+    top: -5px;
+    color: #c49b63;
+    font-size: 12px;
+}
+
+.usuario input:focus~span::before,
+.usuario input:valid~span::before,
+.contraseña input:focus~span::before,
+.contraseña input:valid~span::before {
+    width: 100%;
+}
+
+/*boton iniciar sesion*/
+.formulario input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    margin: 20px 0;
+    border: none;
+    background: #c49b63;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.formulario input[type="submit"]:hover {
+    background: #a5794f;
+}
+
+/*registro y recordar*/
+.recordar {
+    text-align: center;
+    color: blue;
+    cursor: pointer;
+}
+
+.recordar:hover {
+    text-decoration: underline;
+}
+
+.registro {
+    text-align: center;
+    margin: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: black;
+}
+
+.registro a {
+    color: blue;
+    text-decoration: none;
+}
+
+.registro a:hover {
+    text-decoration: underline;
+}
+
+/*boton volver pagina principal*/
+.btn-volver {
+    display: block;
+    margin: 20px;
+    padding: 10px 20px;
+    background: #c49b63;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-volver:hover {
+    background: #a5794f;
+}
