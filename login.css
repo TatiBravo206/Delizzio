@@ -152,3 +152,34 @@ body {
 .btn-volver:hover {
     background: #a5794f;
 }
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+    .formulario {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .formulario h1 {
+        font-size: 22px;
+    }
+
+    .usuario input,
+    .contraseña input {
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .formulario input[type="submit"],
+    .btn-volver {
+        font-size: 16px;
+        height: 38px;
+    }
+}
+
+/* Responsive - Tablets */
+@media (max-width: 768px) {
+    .formulario {
+        width: 70%;
+    }
+}
