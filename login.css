@@ -19,6 +19,7 @@ body {
     border-radius: 10px;
 }
 
+/*titulo del formulario*/
 .formulario h1 {
     text-align: center;
     padding: 0 0 20px 0;
@@ -49,6 +50,7 @@ body {
     background: none;
 }
 
+/*linea animada al seleccionar usuario o contraseña*/
 .usuario span::before,
 .contraseña span::before {
     content: '';
@@ -61,6 +63,7 @@ body {
     transition: .5s;
 }
 
+/*etiquetas usuario y contraseña*/
 .usuario label,
 .contraseña label {
     position: absolute;
@@ -73,6 +76,7 @@ body {
     transition: .5s;
 }
 
+/*animacion al seleccionar usuario o contraseña*/
 .usuario input:focus~label,
 .usuario input:valid~label,
 .contraseña input:focus~label,
@@ -106,7 +110,7 @@ body {
     background: #a5794f;
 }
 
-/*registro y recordar*/
+/*opcion para recordar la contraseña*/
 .recordar {
     text-align: center;
     color: blue;
@@ -117,6 +121,7 @@ body {
     text-decoration: underline;
 }
 
+/*opcion para registrarse*/
 .registro {
     text-align: center;
     margin: 10px;

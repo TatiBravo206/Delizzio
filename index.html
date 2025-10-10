@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <title>Recetario de Cocina</title>
     <link rel="stylesheet" href="styles.css" />
+    <!--icono para la pestaña del navegador-->
     <link rel="icon" type="image/png" href="img/remy.ico" />
+    <!-- link icono lupa-->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
 </head>
@@ -15,7 +17,7 @@
     <header class="site-header">
         <div class="container header-inner">
             <a class="logo" href="#">Delizzio<span>.</span></a>
-
+            <!-- boton menu movil -->
             <input id="menu-toggle" type="checkbox" class="menu-toggle" />
             <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
                 <span></span>
@@ -27,7 +29,7 @@
                     <li><a href="#categories">Categorías</a></li>
                     <li><a href="#recipes">Recetas</a></li>
                     <li><a href="#chef">Chef</a></li>
-                    <a href="Login.html">Iniciar Sesión</a>
+                    <a href="Login.html">Iniciar Sesión</a> <!-- enlace a login -->
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
@@ -48,10 +50,9 @@
                         👉 Explora nuestro recetario y encuentra tu próxima receta favorita.</p>
                     <a class="btn" href="#recipes">Ver recetas</a>
                 </div>
+                <!--imagen principal-->
                 <div class="hero-art">
-                    <div class="card hero-card">
-                        <img src="img/foto principal.jpg" alt="Banner de presentación del sitio de recetas">
-                    </div>
+                    <img src="img/foto principal.jpg" alt="Banner de presentación del sitio de recetas">
                 </div>
         </section>
         <!-- barra de busqueda -->
@@ -59,6 +60,7 @@
             <div class="buscador">
                 <input type="text" placeholder="Buscar receta..." />
                 <button class="btn-buscador">
+                    <!--icono lupa-->
                     <span class="material-symbols-outlined">
                         search
                     </span>
@@ -70,6 +72,7 @@
             <div class="container">
                 <h2 class="section-title">Categorías</h2>
                 <div class="cats">
+                    <!-- botones de categorias con iconos -->
                     <a href="#recipes" class="chip" data-cat="all">
                         <img src="img/todas-icono.ico" alt="Icono de todas las categorías">
                         <span>Todas</span>
@@ -99,60 +102,80 @@
                 <h2 class="section-title">Recetas</h2>
                 <div class="recipes-grid" id="recipes-grid">
                     <!-- Cartas -->
+                    <!--receta desayuno-->
                     <article class="recipe-card" data-cat="desayuno">
                         <div class="thumb">
+                            <!--imagen receta-->
                             <img src="img/tostadas.jpg" alt="Tostadas con aguacate">
                         </div>
                         <div class="card-body">
+                            <!--nombre receta-->
                             <h3>Tostadas con aguacate</h3>
+                            <!--tiempo y tipo receta-->
                             <p class="meta">10 min · Desayuno saludable</p>
                             <div class="card-actions">
+                                <!--boton de favorito-->
                                 <button class="fav-btn" data-id="r1" aria-pressed="false">♡ Favorito</button>
+                                <!--boton de ver receta-->
                                 <a href="#" class="btn small">Ver receta</a>
                             </div>
                         </div>
                     </article>
-
-
+                    <!--receta postre-->
                     <article class="recipe-card" data-cat="postre">
                         <div class="thumb">
+                            <!--imagen receta-->
                             <img src="img/brownie.jpg" alt="Brownie de chocolate artesanal">
                         </div>
                         <div class="card-body">
+                            <!--nombre receta-->
                             <h3>Brownie de chocolate artesanal</h3>
+                            <!--tiempo y tipo receta-->
                             <p class="meta">40 min · Postre gourmet</p>
                             <div class="card-actions">
+                                <!--boton de favorito-->
                                 <button class="fav-btn" data-id="r2" aria-pressed="false">♡ Favorito</button>
+                                <!--boton de ver receta-->
                                 <a href="#" class="btn small">Ver receta</a>
                             </div>
                         </div>
                     </article>
 
-
+                    <!--receta vegano-->
                     <article class="recipe-card" data-cat="vegano">
                         <div class="thumb">
+                            <!--imagen receta-->
                             <img src="img/bowl.jpg" alt="Bowl vegano de quinoa con vegetales frescos">
                         </div>
                         <div class="card-body">
+                            <!--nombre receta-->
                             <h3>Bowl de quinoa con vegetales frescos</h3>
+                            <!--tiempo y tipo receta-->
                             <p class="meta">25 min · Receta vegana</p>
                             <div class="card-actions">
+                                <!--boton de favorito-->
                                 <button class="fav-btn" data-id="r3" aria-pressed="false">♡ Favorito</button>
+                                <!--boton de ver receta-->
                                 <a href="#" class="btn small">Ver receta</a>
                             </div>
                         </div>
                     </article>
 
-
+                    <!--receta rapido-->
                     <article class="recipe-card" data-cat="rapido">
                         <div class="thumb">
+                            <!--imagen receta-->
                             <img src="img/wrap.jpg" alt="Wrap de pollo con vegetales y salsa ligera">
                         </div>
                         <div class="card-body">
+                            <!--nombre receta-->
                             <h3>Wrap de pollo con vegetales frescos</h3>
+                            <!--tiempo y tipo receta-->
                             <p class="meta">15 min · Receta rápida</p>
                             <div class="card-actions">
+                                <!--boton de favorito-->
                                 <button class="fav-btn" data-id="r4" aria-pressed="false">♡ Favorito</button>
+                                <!--boton de ver receta-->
                                 <a href="#" class="btn small">Ver receta</a>
                             </div>
                         </div>
@@ -181,11 +204,11 @@
 
             </div>
         </section>
-
+        <!-- pie de pagina -->
         <footer id="contact" class="site-footer">
             <div class="container footer-grid">
 
-                <!-- Información principal -->
+                <!-- Información de la pagina -->
                 <div class="footer-about">
                     <h4>Delizzio</h4>
                     <p>Recetas pensadas para la vida real, con sabor y practicidad.</p>
@@ -220,17 +243,17 @@
         </footer>
         <script>
             (() => {
-                // --- Año dinámico ---
+                // Año dinámico 
                 const yearSpan = document.getElementById('year');
                 if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-                // --- Favoritos con LocalStorage ---
+                // Favoritos con LocalStorage
                 const LS_KEY = 'cooky_favs_v1';
                 const favBtns = document.querySelectorAll('.fav-btn');
-                const getFavs = () => JSON.parse(localStorage.getItem(LS_KEY) || '[]');
-                const setFavs = (favs) => localStorage.setItem(LS_KEY, JSON.stringify(favs));
+                const getFavs = () => JSON.parse(localStorage.getItem(LS_KEY) || '[]'); // lee los favoritos guardados
+                const setFavs = (favs) => localStorage.setItem(LS_KEY, JSON.stringify(favs)); // guarda los favoritos
                 let favs = getFavs();
-
+                // Recorre todos los botones de favorito y actualiza su estado
                 const updateFavButtons = () => {
                     favBtns.forEach(btn => {
                         const isFav = favs.includes(btn.dataset.id);
@@ -239,7 +262,7 @@
                         btn.classList.toggle('is-fav', isFav);
                     });
                 };
-
+                // se guarda los favoritos si se vuelve a cargar la pagina
                 favBtns.forEach(btn => {
                     btn.addEventListener('click', () => {
                         const id = btn.dataset.id;
@@ -251,7 +274,7 @@
                 });
                 updateFavButtons();
 
-                // --- Filtros de categorías ---
+                // Filtros de categorías 
                 const chips = document.querySelectorAll('.chip');
                 const cards = document.querySelectorAll('.recipe-card');
 
@@ -268,7 +291,7 @@
                     });
                 });
 
-                // --- Cerrar menú en móvil ---
+                // Cerrar menú en móvil 
                 const menuToggle = document.getElementById('menu-toggle');
                 document.querySelectorAll('.nav a').forEach(link => {
                     link.addEventListener('click', () => {

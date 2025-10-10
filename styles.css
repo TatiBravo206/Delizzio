@@ -1,14 +1,16 @@
-/* === Reset general === */
+/* Reset general */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* desplazamiento suave*/
 html {
     scroll-behavior: smooth;
 }
 
+/* Fuente global y colores */
 body {
     font-family: "Poppins", Arial, sans-serif;
     color: #222;
@@ -16,14 +18,14 @@ body {
     line-height: 1.6;
 }
 
-/* === Contenedor general === */
+/* Contenedor general */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 
-/* === Header === */
+/* Header */
 .site-header {
     position: sticky;
     top: 0;
@@ -39,6 +41,7 @@ body {
     height: 80px;
 }
 
+/* estilo del Logo */
 .logo {
     font-size: 1.8rem;
     font-weight: 700;
@@ -46,17 +49,19 @@ body {
     text-decoration: none;
 }
 
+/* color del punto del logo */
 .logo span {
     color: #c49b63;
 }
 
-/* === Navegación === */
+/* Navegación */
 .nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
 }
 
+/* estilo de los enlaces del menu */
 .nav a {
     text-decoration: none;
     color: #222;
@@ -64,15 +69,17 @@ body {
     transition: color 0.3s;
 }
 
+/* color al pasar el cursor sobre los enlaces del menu */
 .nav a:hover {
     color: #c49b63;
 }
 
-/* === Menú móvil === */
+/* Menú móvil */
 .menu-toggle {
     display: none;
 }
 
+/* estilo del boton del menu movil */
 .menu-btn {
     display: none;
     cursor: pointer;
@@ -104,7 +111,7 @@ body {
     top: 7px;
 }
 
-/* === Hero === */
+/* Hero */
 .hero {
     display: flex;
     align-items: center;
@@ -120,23 +127,27 @@ body {
     gap: 2rem;
 }
 
+/* estilo del encabezado del hero */
 .hero-text h1 {
     font-size: 2.2rem;
     color: #222;
     margin-bottom: 1rem;
 }
 
+/* color del span del encabezado del hero */
 .hero-text span {
     color: #c49b63;
     font-weight: 600;
 }
 
+/* estilo del párrafo del hero */
 .hero-text p {
     margin-bottom: 2rem;
     font-size: 1rem;
     color: #444;
 }
 
+/* estilo del botón "ver recetas" */
 .hero .btn {
     background: #c49b63;
     color: #fff;
@@ -147,21 +158,24 @@ body {
     transition: background 0.3s;
 }
 
+/* color al pasar el cursor sobre el botón "ver recetas" */
 .hero .btn:hover {
     background: #b6894f;
 }
 
+/* estilo de la imagen del hero */
 .hero-art img {
     width: 100%;
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
-/* === Secciones generales === */
+/* Secciones generales */
 .section {
     padding: 4rem 0;
 }
 
+/* estilo del título h2 */
 .section-title {
     text-align: center;
     font-size: 1.8rem;
@@ -183,6 +197,7 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* estilo del input del buscador */
 .buscador input {
     flex: 1;
     padding: 0.6rem 1rem;
@@ -192,6 +207,7 @@ body {
     background: transparent;
 }
 
+/* estilo del botón del buscador */
 .buscador .btn-buscador {
     background: #c49b63;
     border: none;
@@ -208,6 +224,7 @@ body {
     background: #a3773f;
 }
 
+/* estilo del icono de lupa */
 .symbols-outlined {
     font-size: 24px;
     color: rgb(53, 6, 6);
@@ -221,6 +238,7 @@ body {
     gap: 1rem;
 }
 
+/* estilo de los botones de categorías */
 .chip {
     display: flex;
     flex-direction: column;
@@ -236,25 +254,28 @@ body {
     transition: all 0.3s;
 }
 
+/* tamaño de los iconos de los botones de categorías */
 .chip img {
     width: 80px;
     height: 80px;
     margin-bottom: 5px;
 }
 
+/* color al pasar el cursor sobre los botones de categorías*/
 .chip:hover,
 .chip.active {
     background: #c49b63;
     color: #fff;
 }
 
-/* === Recetas === */
+/* Recetas */
 .recipes-grid {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+/* estilo de las tarjetas de recetas */
 .recipe-card {
     background: #fff;
     border-radius: 16px;
@@ -270,6 +291,7 @@ body {
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
 }
 
+/* estilo de la imagen de las tarjetas de recetas */
 .thumb img {
     width: 100%;
     height: 200px;
@@ -278,24 +300,29 @@ body {
 
 .card-body {
     padding: 1.5rem;
+    /* espacio interno de las tarjetas*/
 }
 
+/* estilo del nombre de la receta */
 .card-body h3 {
     margin-bottom: 0.5rem;
     color: #222;
 }
 
+/* estilo del tiempo y tipo de receta */
 .card-body .meta {
     font-size: 0.9rem;
     color: #777;
     margin-bottom: 1rem;
 }
 
+/* contenedor de los botones de las tarjetas de recetas */
 .card-actions {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 /* Botón ver receta */
 .btn.small {
     background: #c49b63;
@@ -305,6 +332,7 @@ body {
     text-decoration: none;
     font-size: 0.9rem;
 }
+
 /* Botón de favorito */
 .fav-btn {
     border: none;
@@ -336,6 +364,7 @@ body {
     margin: 0 auto;
 }
 
+/* estilo de la foto del chef */
 .chef-photo img {
     width: 50%;
     height: auto;
@@ -345,16 +374,19 @@ body {
     margin: 0 auto;
 }
 
+/* estilo del encabezado del chef */
 .chef-bio h3 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
+/* estilo del párrafo del chef */
 .chef-bio p {
     margin-bottom: 2rem;
     color: #555;
 }
 
+/* estilo del botón "ver más" del chef */
 .chef-bio .btn {
     background: #c49b63;
     color: white;
@@ -377,11 +409,13 @@ body {
     gap: 2rem;
 }
 
+/* estilo de los encabezados del footer */
 .footer-grid h4 {
     color: #c49b63;
     margin-bottom: 1rem;
 }
 
+/* estilo de los enlaces de navegación del footer */
 .footer-nav nav a {
     display: inline-block;
     color: #f0f0f0;
@@ -393,6 +427,7 @@ body {
     color: #c49b63;
 }
 
+/* estilo de la lista de redes sociales del footer */
 .footer-social ul {
     list-style: none;
     padding: 0;
