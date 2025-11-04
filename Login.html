@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio sesion Delizzio</title>
+    <title>Inicio sesion | Delizzio</title>
     <link rel="stylesheet" href="login.css">
     <!--icono para la pestaña del navegador-->
     <link rel="icon" href="img/remy.ico">
@@ -28,17 +28,18 @@
                 <span></span>
             </div>
             <!--boton para iniciar sesion-->
-            <input type="submit" value="Iniciar Sesión">
+            <input type="button" id="loginBtn" value="Iniciar Sesión">
             <!--opcion para recordar la contraseña-->
-            <div class="recordar">¿olvido su contraseña? </div>
+            <div class="recordar">
+                <a href="recuperarPas.html" class="forgot-password">¿olvido su contraseña?</a></div>
             <!--opcion para registrarse-->
             <div class="registro">
-                ¿No tiene cuenta? Registrese <a href="registro">aqui</a>
+                ¿No tiene cuenta? Registrese <a href="registro.html">aqui</a>
             </div>
             <!--boton para volver a la pagina principal-->
             <a href="index.html" class="btn-volver">Volver al Inicio</a>
         </form>
-
+        <script src="login.js"></script>
 </body>
 
 </html>

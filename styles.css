@@ -12,7 +12,7 @@ html {
 
 /* Fuente global y colores */
 body {
-    font-family: "Poppins", Arial, sans-serif;
+    font-family: Arial, sans-serif;
     color: #222;
     background-color: #fffaf7;
     line-height: 1.6;
@@ -37,8 +37,8 @@ body {
 .header-inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     height: 80px;
+    gap: 2rem;
 }
 
 /* estilo del Logo */
@@ -55,6 +55,10 @@ body {
 }
 
 /* Navegación */
+.nav {
+    margin-left: auto;
+}
+
 .nav ul {
     list-style: none;
     display: flex;
@@ -74,12 +78,86 @@ body {
     color: #c49b63;
 }
 
+#perfilUsuario {
+    display: none;
+}
+
+#botonLogin a {
+    text-decoration: none;
+    border: 1px solid #c49b63;
+    color: #c49b63;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    padding: 8px 14px;
+}
+
+#botonLogin a:hover {
+    background: #b6894f;
+    color: white;
+}
+
+/* Perfil */
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #c49b63;
+    padding: 5px 10px;
+    border-radius: 35px;
+    transition: all 0.3s ease;
+}
+
+.perfil:hover {
+    background-color: #f7f0e7;
+    border-color: #b6894f;
+}
+
+.avatar-img {
+    width: 45px;
+    height: 45px;
+}
+
+/* Menú desplegable */
+.menuPerfil {
+    position: absolute;
+    top: 60px;
+    right: -50px;
+    width: 200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menuPerfil a,
+.menuPerfil button {
+    padding: 10px;
+    color: #222;
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.menuPerfil a:hover,
+.menuPerfil button:hover {
+    color: #c49b63;
+}
+.menuPerfil i {
+    margin-right: 10px; 
+}
+
 /* Menú móvil */
 .menu-toggle {
     display: none;
 }
 
-/* estilo del boton del menu movil */
 .menu-btn {
     display: none;
     cursor: pointer;
@@ -96,19 +174,18 @@ body {
     position: relative;
 }
 
-.menu-btn span::before,
-.menu-btn span::after {
+.menu-btn span::before {
     content: "";
     position: absolute;
+    top: -7px;
     left: 0;
 }
 
-.menu-btn span::before {
-    top: -7px;
-}
-
 .menu-btn span::after {
+    content: "";
+    position: absolute;
     top: 7px;
+    left: 0;
 }
 
 /* Hero */
@@ -347,55 +424,6 @@ body {
     transform: scale(1.2);
 }
 
-/* Chef */
-.section-chef {
-    background: linear-gradient(to right, #fffaf7, #fff1e6);
-    ;
-    width: 100%;
-    padding: 4rem 0;
-}
-
-.chef-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 3rem;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* estilo de la foto del chef */
-.chef-photo img {
-    width: 50%;
-    height: auto;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    display: block;
-    margin: 0 auto;
-}
-
-/* estilo del encabezado del chef */
-.chef-bio h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-/* estilo del párrafo del chef */
-.chef-bio p {
-    margin-bottom: 2rem;
-    color: #555;
-}
-
-/* estilo del botón "ver más" del chef */
-.chef-bio .btn {
-    background: #c49b63;
-    color: white;
-    padding: 0.7rem 1.5rem;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
 /* Footer  */
 .site-footer {
     background: #111;
@@ -421,6 +449,8 @@ body {
     color: #f0f0f0;
     text-decoration: none;
     margin-right: 0.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-nav nav a:hover {
@@ -446,6 +476,11 @@ body {
     color: #c49b63;
 }
 
+.footer-social i {
+    font-size: 1.3rem;
+    color: #b6894f;
+}
+
 .copyright {
     text-align: center;
     margin-top: 2rem;
@@ -455,7 +490,16 @@ body {
 
 /* Responsive menú */
 @media (max-width: 768px) {
+    .logo{
+        order: 1;
+    }
+    .header-inner {
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
     .menu-btn {
+        order: 3;
         display: block;
     }
 
@@ -463,21 +507,43 @@ body {
         position: absolute;
         top: 80px;
         right: 0;
-        width: 100%;
+        width: 200px;
         background: #fff;
-        border-top: 1px solid #eee;
+        border-radius: 16px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        padding: 1rem 0;
         display: none;
         flex-direction: column;
         text-align: center;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        opacity: 0;
+        transform: translateY(-10px);
+        z-index: 999;
+    }
+    .perfil {
+        padding: 3px 6px;
+        border: 1px solid #c49b63;
+    }
+
+    #botonLogin,
+    #perfilUsuario {
+        order: 2;
+        flex-shrink: 0;
     }
 
     .menu-toggle:checked+.menu-btn+.nav {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
     }
 
     .nav ul {
         flex-direction: column;
         padding: 1rem 0;
         gap: 1rem;
+    }
+    .buscador{
+        margin-left: 15px;
+        margin-right: 15px;
     }
 }

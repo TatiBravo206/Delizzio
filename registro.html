@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro | Delizzio</title>
+    <link rel="stylesheet" href="registro.css">
+    <link rel="icon" href="img/remy.ico">
+</head>
+<body>
+   <!--Formulario de inicio de sesion-->
+    <div class="formulario">
+        <h1>Regístrate y <br>Guarda tus Recetas</h1>
+        <form method="post" id="formulario">
+            <!--nombre del usuario-->
+            <div class="usuario">
+                <input type="text" id="username" name="Usuario" required>
+                <label for="username">Usuario:</label>
+                <span></span>
+            </div>
+             <!--contraseña del usuario-->
+            <div class="contraseña">
+                <input type="password" id="password" name="Contraseña" required>
+                <label for="password">Contraseña:</label>
+                <span></span>
+            </div>
+             <!--correo -->
+            <div class="correo">
+                <input type="email" id="email" name="Correo" required>
+                <label for="email">Correo Electrónico:</label>
+                <span></span>
+            </div>
+            <!--boton para iniciar sesion-->
+            <input type="submit" id="registro-btn" value="Registrarse">
+            <!--boton para iniciar sesion-->
+            <div class="registro-texto">
+                ¿Ya tienes cuenta? <a href="Login.html"> Inicia Sesion</a>
+            </div>
+        </form>
+</form>
+<script src="registro.js"></script>
+</body>
+</html>

@@ -4,36 +4,52 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    <title>Recetario de Cocina</title>
+    <title>Recetario de Cocina | Delizzio</title>
     <link rel="stylesheet" href="styles.css" />
     <!--icono para la pestaña del navegador-->
     <link rel="icon" type="image/png" href="img/remy.ico" />
     <!-- link icono lupa-->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <header class="site-header">
         <div class="container header-inner">
-            <a class="logo" href="#">Delizzio<span>.</span></a>
-            <!-- boton menu movil -->
+            <a class="logo" href="index.html">Delizzio<span>.</span></a>
+
+            <!-- Botón menú móvil -->
             <input id="menu-toggle" type="checkbox" class="menu-toggle" />
             <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
                 <span></span>
             </label>
-            <!-- menu principal -->
+
+            <!-- Menú principal -->
             <nav class="nav">
                 <ul>
-                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="#categories">Categorías</a></li>
                     <li><a href="#recipes">Recetas</a></li>
-                    <li><a href="#chef">Chef</a></li>
-                    <a href="Login.html">Iniciar Sesión</a> <!-- enlace a login -->
-                    <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
-        </div>
+
+            <!-- Botón de login -->
+            <div id="botonLogin">
+                <a href="Login.html">Iniciar Sesión</a>
+            </div>
+
+            <!-- Perfil usuario -->
+            <div class="perfil" id="perfilUsuario" style="display: none;">
+                <img src="img/remy.ico" alt="avatar" class="avatar-img">
+                <span id="nombreUsuario"></span>
+                <div class="menuPerfil" id="menuPerfil"> 
+                    <a href="perfil.html"><i class="fa-solid fa-user-circle"></i>Mis Recetas</a>
+                    <a href="favoritos.html"><i class="fa-solid fa-heart"></i>Mis Favoritos</a>
+                    <button id="cerrarSesion">
+                        <i class="fa-solid fa-sign-out"></i>Cerrar sesión</button>
+                </div>
+            </div>
     </header>
     <!-- contenido principal -->
     <main>
@@ -184,26 +200,6 @@
             </div>
         </section>
 
-        <section id="chef" class="section-chef">
-            <div class="container chef-grid">
-
-                <!-- Imagen del Chef -->
-                <div class="chef-photo card">
-                    <img src="img/chef.jpeg" alt="Chef principal del sitio">
-                </div>
-
-                <!-- Biografía del Chef -->
-                <div class="chef-bio">
-                    <h3>Chef Mariana</h3>
-                    <p>
-                        Apasionada por la cocina sencilla y saludable. Comparte recetas con pasos claros, ingredientes
-                        accesibles y consejos prácticos para todos los niveles.
-                    </p>
-                    <a href="#contact" class="btn">Contactar</a>
-                </div>
-
-            </div>
-        </section>
         <!-- pie de pagina -->
         <footer id="contact" class="site-footer">
             <div class="container footer-grid">
@@ -218,9 +214,10 @@
                 <div class="footer-nav">
                     <h4>Navegación</h4>
                     <nav>
-                        <a href="#recipes">Recetas</a>
+                        <a href="#home">Inicio</a>
                         <a href="#categories">Categorías</a>
-                        <a href="#contact">Contacto</a>
+                        <a href="#recipes">Recetas</a>
+                        <a href="Login.html">Iniciar Sesión</a>
                     </nav>
                 </div>
 
@@ -228,9 +225,18 @@
                 <div class="footer-social">
                     <h4>Síguenos</h4>
                     <ul>
-                        <li><a href="#" aria-label="Instagram">@Delizzio</a></li>
-                        <li><a href="#" aria-label="Facebook">Facebook</a></li>
-                        <li><a href="#" aria-label="TikTok">TikTok</a></li>
+
+                        <li><a href="https://www.facebook.com/" target="_blank">
+                                <i class="fa-brands fa-facebook"></i> Delizzio</a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i> @Delizzio.</a></li>
+                        <li><a href="https://www.tiktok.com/" target="_blank">
+                                <i class="fa-brands fa-tiktok"></i> @Delizzio.</a></li>
+                        <li>
+                            <a href="mailto:delizzio.contacto@gmail.com" target="_blank">
+                                <i class="fa-solid fa-envelope"></i> delizzio.contacto@gmail.com
+                            </a>
+                        </li>
                     </ul>
                 </div>
 

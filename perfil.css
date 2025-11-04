@@ -1,0 +1,445 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fuente global y colores */
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #fffaf7;
+    line-height: 1.6;
+}
+
+/* Contenedor general */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+.site-header {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    border-bottom: 1px solid #f0e6dc;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    gap: 2rem;
+}
+
+/* estilo del Logo */
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #222;
+    text-decoration: none;
+}
+
+/* color del punto del logo */
+.logo span {
+    color: #c49b63;
+}
+
+#botonLogin a {
+    text-decoration: none;
+    border: 1px solid #c49b63;
+    color: #c49b63;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+    padding: 8px 14px;
+}
+
+#botonLogin a:hover {
+    background: #b6894f;
+    color: white;
+}
+
+/* Perfil */
+.perfil {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    border: 2px solid #c49b63;
+    padding: 5px 10px;
+    border-radius: 35px;
+    transition: all 0.3s ease;
+}
+
+.perfil:hover {
+    background-color: #f7f0e7;
+    border-color: #b6894f;
+}
+
+.avatar-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* Menú desplegable */
+.menuPerfil {
+    position: absolute;
+    top: 60px;
+    right: 5px;
+    width: 200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menuPerfil a,
+.menuPerfil button {
+    padding: 10px;
+    color: #222;
+    background: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.menuPerfil a:hover,
+.menuPerfil button:hover {
+    color: #c49b63;
+}
+
+.menuPerfil i {
+    margin-right: 10px;
+}
+
+/* Sección de contenido principal */
+.perfil-section {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.perfil-section h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.perfil-section p {
+    color: #666;
+}
+
+/* Grid de Recetas del usuario (Añadido para mostrar las cards) */
+.recipes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.recipe-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-card .thumb img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.recipe-card .card-body {
+    padding: 15px;
+}
+
+.recipe-card h3 {
+    margin-bottom: 5px;
+    color: #c49b63;
+}
+
+.recipe-card .meta {
+    font-size: 0.85rem;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.recipe-card p {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.recipe-card .borrarReceta {
+    padding: 8px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.recipe-card .borrarReceta:hover {
+    background-color: #c0392b;
+}
+
+
+/*Botón de Abrir Modal */
+.boton-modal {
+    padding: 10px 0;
+}
+
+.boton-modal label {
+    padding: 10px 15px;
+    background-color: #c49b63;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.boton-modal label:hover {
+    background-color: #b6894f;
+}
+
+.modal-toggle {
+    display: none;
+}
+
+/* MODAL */
+.container-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 9999;
+}
+
+.modal-toggle:checked+.container-modal {
+    display: flex;
+}
+
+/* Contenido del formulario */
+.contect-modal .form-receta {
+    background: #fff;
+    width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+}
+
+/* Título del formulario */
+.form-receta h2 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid #c7894b;
+}
+
+.form-receta .titulo,
+.form-receta .descripcion,
+.form-receta .ingredientes,
+.form-receta .pasos,
+.form-receta .tiempo,
+.form-receta .imagen {
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+    min-height: 40px;
+}
+
+.titulo input,
+.descripcion textarea,
+.ingredientes input,
+.pasos textarea,
+.tiempo input,
+.imagen input {
+    width: 100%;
+    padding: 0 5px;
+    height: auto;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.titulo input,
+.ingredientes input,
+.tiempo input,
+.imagen input {
+    height: 40px;
+}
+
+.descripcion textarea,
+.pasos textarea {
+    min-height: 120px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    resize: vertical;
+}
+
+.categoria {
+    border-bottom: none;
+    position: relative;
+    margin: 30px 0;
+}
+
+.categoria select {
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    height: auto;
+    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+.categoria label {
+    position: static;
+    display: block;
+    margin-bottom: 5px;
+    transform: none;
+    color: #222;
+    font-size: 14px;
+}
+
+.titulo span::before,
+.descripcion span::before,
+.ingredientes span::before,
+.pasos span::before,
+.tiempo span::before,
+.imagen span::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #c49b63;
+    transition: .5s;
+}
+
+.titulo label,
+.descripcion label,
+.ingredientes label,
+.pasos label,
+.tiempo label,
+.imagen label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.descripcion textarea~label,
+.pasos textarea~label {
+    top: 10px;
+    transform: none;
+}
+
+.titulo input:focus~label,
+.titulo input:valid~label,
+.descripcion textarea:focus~label,
+.descripcion textarea:valid~label,
+.ingredientes input:focus~label,
+.ingredientes input:valid~label,
+.pasos textarea:focus~label,
+.pasos textarea:valid~label,
+.tiempo input:focus~label,
+.tiempo input:valid~label,
+.imagen input:focus~label,
+.imagen input:valid~label {
+    top: -5px;
+    color: #c49b63;
+    font-size: 12px;
+}
+
+.titulo input:focus~span::before,
+.titulo input:valid~span::before,
+.descripcion textarea:focus~span::before,
+.descripcion textarea:valid~span::before,
+.ingredientes input:focus~span::before,
+.ingredientes input:valid~span::before,
+.pasos textarea:focus~span::before,
+.pasos textarea:valid~span::before,
+.tiempo input:focus~span::before,
+.tiempo input:valid~span::before,
+.imagen input:focus~span::before,
+.imagen input:valid~span::before {
+    width: 100%;
+}
+
+/* Sección de Botones  */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Botón Subir receta  */
+.modal-footer .btn-submit-receta {
+    display: block;
+    width: 200px;
+    margin: 0;
+    height: 40px;
+    border: none;
+    background: #c49b63;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(196, 155, 99, 0.4);
+    transition: all 0.3s ease;
+}
+
+.modal-footer .btn-submit-receta:hover {
+    background: #a5794f;
+}
+
+/* Botón Cerrar */
+.modal-footer .btn-cerrar {
+    margin: 0;
+}
+
+.btn-cerrar label {
+    padding: 10px 35px;
+    background-color: #a76d21;
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-cerrar label:hover {
+    background-color: #b6894f;
+}
