@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil | Delizzio</title>
+    <link rel="stylesheet" href="../CSS/perfil.css" />
+    <link rel="icon" type="image/png" href="../img/remy.ico" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo">Delizzio<span>.</span></a>
+
+            <div class="perfil" id="perfilUsuario">
+                <i class="fa-solid fa-user"></i>
+                <span id="nombreUsuario"></span>
+                <div class="menuPerfil" id="menuPerfil">
+                    <a href="../index.html"><i class="fa-solid fa-house"></i>Inicio</a>
+                    <a href="../HTML/perfil.html"><i class="fa-solid fa-user-circle"></i>Mis Recetas</a>
+                    <a href="../HTML/fav.html"><i class="fa-solid fa-heart"></i>Mis Favoritos</a>
+                    <button id="cerrarSesion">
+                        <i class="fa-solid fa-sign-out"></i>Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="perfil-section">
+            <h1>¡Hola, <span id="usuarioNombre"></span>!</h1>
+            <p>Comparte con nosotros tus recetas más deliciosas y crea tu propio recetario.<br>
+                Pulsa el botón <strong>"Subir Receta"</strong> para empezar a añadir tus platos favoritos.</p>
+            <div class="boton-modal">
+                <label for="modal-form-recetas">Subir Receta</label>
+            </div>
+            <input type="checkbox" id="modal-form-recetas" class="modal-toggle">
+            <!-- Modal formulario -->
+            <div class="container-modal">
+                <div class="content-modal">
+                    <!-- Formulario -->
+                    <form id="formReceta" class="form-receta" method="POST">
+                        <h2>Subir Receta</h2>
+                        <div class="grupo">
+                            <label for="titulo">Nombre de la Receta</label>
+                            <input type="text" name="nombre_receta" id="titulo" required>
+                        </div>
+                        <div class="grupo">
+                            <label for="descripcion">Descripción</label>
+                            <input type="text" name="descripcion" id="descripcion"
+                                placeholder="Escribe una breve descripción de la receta" required>
+                        </div>
+                        <div class="grupo">
+                            <label for="ingredientes">Ingredientes</label>
+                            <input type="text" name="descripcion" id="ingredientes"
+                                placeholder="Escribe cada ingrediente separado por coma (Harina, Huevos)" required>
+                        </div>
+                        <div class="grupo">
+                            <label for="pasos">Pasos de la Receta</label>
+                            <textarea name="instrucciones" id="pasos" placeholder="Escribe cada paso en una línea distinta
+(usa Enter para separar)" required></textarea>
+                        </div>
+                        <div class="grupo">
+                            <label for="porciones">Porciones</label>
+                            <input type="number" name="porciones" id="porciones" min="1" required>
+                        </div>
+                        <div class="grupo">
+                            <label for="tiempo">Tiempo de preparación (minutos)</label>
+                            <input type="number" name="tiempo_min" id="tiempo" min="1" required>
+                        </div>
+                        <div class="grupo">
+                            <label for="dificultad">Dificultad</label>
+                            <select name="id_dificultad" id="dificultad" required>
+                                <option value="">Selecciona dificultad</option>
+                                <option value="1">Facil</option>
+                                <option value="2">Media</option>
+                                <option value="3">Dificil</option>
+                            </select>
+                        </div>
+                        <div class="grupo">
+                            <label for="categoria">Categoría</label>
+                            <select name="id_cate" id="categoria" required>
+                                <option value="">Selecciona categoría</option>
+                                <option value="1">Desayuno</option>
+                                <option value="2">Postre</option>
+                                <option value="3">Vegano</option>
+                                <option value="4">Rapido</option>
+                            </select>
+                        </div>
+                        <div class="grupo">
+                            <label for="imagen">Imagen de la Receta</label>
+                            <input type="file" name="imagen" id="imagen" accept="image/*" required>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn-submit-receta">Subir receta</button>
+                            <div class="btn-cerrar">
+                                <label for="modal-form-recetas">Cerrar</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipes-section">
+            <h2 class="title">Mis Recetas</h2>
+            <div id="misRecetas" class="recipes-grid">
+                <!-- Recetas subidas por el usuario -->
+            </div>
+        </section>
+
+        <!-- MODAL VER RECETA -->
+        <div class="modal" id="recipeModal">
+            <div class="modal-content">
+                <button class="close-btn" id="closeModal">&times;</button>
+                <div class="modal-header-section">
+                    <img id="modalImage" src="" alt="Imagen de receta">
+                    <div class="modal-info">
+                        <h2 id="modalTitle"></h2>
+                        <p><strong>Tiempo:</strong> <span id="modalTime"></span></p>
+                        <p><strong>Categoría:</strong> <span id="modalCategory"></span></p>
+                        <p><strong>Dificultad:</strong> <span id="modalDifficulty"></span></p>
+                        <p><strong>Porciones:</strong> <span id="modalServings"></span></p>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Descripción:</strong> <span id="modalDescription"></span></p>
+                        <h4>Ingredientes:</h4>
+                        <ul id="modalIngredients"></ul>
+                        <h4>Pasos:</h4>
+                        <ol id="modalSteps"></ol>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../JS/perfil.js"></script>
+</body>
+
+</html>

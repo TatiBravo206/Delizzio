@@ -3,7 +3,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     color: #222;
-    background: url(img/fondo_login.jpg);
+    background: url(../img/fondo_login.jpg);
     background-repeat: repeat;
     background-size: auto;
     opacity: 0.95;
@@ -31,7 +31,6 @@ body::before {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-/*titulo del formulario*/
 .formulario h1 {
     text-align: center;
     padding: 0 0 20px 0;
@@ -43,7 +42,6 @@ body::before {
     box-sizing: border-box;
 }
 
-/*usuario y contraseña*/
 .formulario .usuario,
 .formulario .contraseña {
     position: relative;
@@ -62,7 +60,6 @@ body::before {
     background: none;
 }
 
-/*linea animada al seleccionar usuario o contraseña*/
 .usuario span::before,
 .contraseña span::before {
     content: '';
@@ -75,7 +72,6 @@ body::before {
     transition: .5s;
 }
 
-/*etiquetas usuario y contraseña*/
 .usuario label,
 .contraseña label {
     position: absolute;
@@ -88,7 +84,6 @@ body::before {
     transition: .5s;
 }
 
-/*animacion al seleccionar usuario o contraseña*/
 .usuario input:focus~label,
 .usuario input:valid~label,
 .contraseña input:focus~label,
@@ -123,7 +118,6 @@ body::before {
     background: #a5794f;
 }
 
-/*opcion para recordar la contraseña*/
 .recordar {
     text-align: center;
     color: blue;
@@ -157,7 +151,7 @@ body::before {
     display: block;
     width: 200px;
     margin: 20px auto;
-    padding: 5px 10px; 
+    padding: 5px 10px;
     background: #c49b63;
     color: #fff;
     border: none;

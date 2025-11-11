@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registro | Delizzio</title>
-    <link rel="stylesheet" href="registro.css">
-    <link rel="icon" href="img/remy.ico">
+    <link rel="stylesheet" href="../CSS/registro.css">
+    <link rel="icon" href="../img/remy.ico">
 </head>
 <body>
    <!--Formulario de inicio de sesion-->
     <div class="formulario">
         <h1>Regístrate y <br>Guarda tus Recetas</h1>
-        <form method="post" id="formulario">
+        <form method="post" id="formulario" action="../registro.php">
             <!--nombre del usuario-->
             <div class="usuario">
                 <input type="text" id="username" name="Usuario" required>
@@ -34,10 +34,9 @@
             <input type="submit" id="registro-btn" value="Registrarse">
             <!--boton para iniciar sesion-->
             <div class="registro-texto">
-                ¿Ya tienes cuenta? <a href="Login.html"> Inicia Sesion</a>
+                ¿Ya tienes cuenta? <a href="../HTML/Login.html"> Inicia Sesion</a>
             </div>
         </form>
-</form>
-<script src="registro.js"></script>
+<script src="../JS/registro.js"></script>
 </body>
 </html>

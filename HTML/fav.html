@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Favoritos | Delizzio</title>
+  <link rel="stylesheet" href="../CSS/fav.css" />
+  <link rel="icon" type="image/png" href="../img/remy.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="../index.html" class="logo">Delizzio<span>.</span></a>
+
+      <div class="perfil" id="perfilUsuario">
+        <i class="fa-solid fa-user"></i>
+        <span id="nombreUsuario"></span>
+        <div class="menuPerfil" id="menuPerfil">
+          <a href="../index.html"><i class="fa-solid fa-house"></i>Inicio</a>
+          <a href="../HTML/perfil.html"><i class="fa-solid fa-user-circle"></i>Mis Recetas</a>
+          <button id="cerrarSesion" type="button">
+            <i class="fa-solid fa-sign-out"></i>Cerrar sesión</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="perfil-section">
+    <h1>Mis Favoritos</h1>
+    <section id="favoritosContainer" class="recipes-grid"></section>
+  </main>
+
+  <script src="../JS/fav.js"></script>
+</body>
+</html>
+

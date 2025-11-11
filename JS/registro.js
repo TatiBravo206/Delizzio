@@ -9,12 +9,10 @@ document.getElementById("formulario").addEventListener("submit", (e) => {
     // Guardamos usuario, pass y email
     const usuarios = JSON.parse(localStorage.getItem("usuarios") || "[]");
     
-    // Verifica si ya existe
     if (usuarios.find(u => u.usuario === usuario)) {
         alert("Este nombre de usuario ya existe, intenta con otro.");
         return;
     }
-    // Opcional: Verifica si el correo ya existe
     if (usuarios.find(u => u.email === email)) {
         alert("Este correo electrónico ya está registrado.");
         return;
